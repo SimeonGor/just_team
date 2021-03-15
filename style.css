@@ -1,0 +1,204 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet"> 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Balsamiq Sans', cursive;*/
+	background-color: #e0ffff;
+}
+
+.main {
+	margin: auto;
+	width: 80%;
+	background: white;
+	margin-bottom: 100px;
+
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+.main:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.part {
+	clear: both;
+}
+
+
+@media (min-width: 700px) {
+	.header {
+		padding-top: 50px;
+		width: 100%;
+		clear: both;
+	}
+
+	.logo {
+		width: 30%;
+		margin-left: 35%;
+	}
+
+	.column {
+		float: left;
+		display: block;
+		min-height: 100px;
+		text-align: center;
+	}
+
+	#leftcolumn {
+		width: 40%;
+		padding-top: 100px;
+		overflow: hidden;
+	}
+
+	#rightcolumn {
+		width: 60%;
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 699px) {
+	.header {
+		padding-top: 50px;
+		width: 100%;
+		clear: both;
+	}
+
+	.logo {
+		width: 60%;
+		margin-left: 15%;
+	}
+
+	.column {
+		min-height: 100px;
+		clear: both;
+		display: block;
+		text-align: center;
+	}
+
+	#leftcolumn {
+		padding-top: 50px;
+	}
+
+	#rightcolumn { 
+
+	}
+}
+
+.box {
+	width: 80%;
+	margin: auto;
+	/*text-align: justify;*/
+}
+
+.row {
+	min-height: 100px;
+	clear: both;
+	display: block;
+	text-align: center;
+}
+
+#top {
+	padding-top: 50px;
+}
+
+#bottom {
+
+}
+
+.space {
+	min-height: 100px;
+}
+
+.img {
+	width: 500px;
+	margin: auto;
+	max-width: 90%;
+}
+
+#link {
+	width: 500px;
+	max-width: 90%;
+	padding-top: 50px;
+	text-align: left;
+}
+
+.title {
+	color: #FF8C00;
+	/*color: #FFA500;*/
+}
+
+strong {
+	color: #facf32
+	/*color: #FFA500;*/
+	/*color: #FFD700;*/
+}
+
+
+
+
+
+
+
+
+
+
+/*
+h1 {
+	font-size:1.5em;
+	background-color: #fff;
+	max-width: 1000px;
+	width: 95%;
+	margin: auto;
+	padding: 40px;
+	text-align: left;
+}
+
+.text {
+	font-size: 1em;
+	background-color: #fff;
+	max-width: 1000px;
+	width: 95%;
+	margin: auto;
+	padding: 50px, 0px;
+	text-align: justify;
+}
+
+img {
+	max-width: 900px;
+	display: block;
+	margin: auto;
+	padding: 1rem 1rem;
+}
+
+.link {
+	font-size: 1em;
+	background-color: #fff;
+	max-width: 1000px;
+	width: 95%;
+	margin: auto;
+	padding: 40px;
+	text-align: center;
+}
+
+div {
+	background-color: #fff;
+	max-width: 1000px;
+	width: 95%;
+	margin: auto;
+	padding: 40px;
+}
+
+
+.logo {
+	width: 300px;
+}*/

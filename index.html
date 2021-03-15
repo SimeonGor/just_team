@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JustTeam</title>
+	<link href='style.css' rel='stylesheet'>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<img class='logo' src='images/blur/logo.png' data-src='images/logo.png' alt='логотип'>
+		</div>
+		<div class="space"><div></div></div>
+		<div class="part">
+			<div class="row" id="top">
+				<h1 class="title">Наша цель</h1>
+			</div>
+			<div class="row" id="bottom">
+				<div class="box">
+					<h4 class="text">
+						Мы предлагаем бесплатное программное обеспечение для <strong>повышения информативности</strong> киберспортивных трансляций.
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="part">
+			<div class="column" id="leftcolumn">
+				<h1 class="title">Что мы делаем?</h1>
+			</div>
+			<div class="column" id="rightcolumn">
+				<div class="box">
+					<h4 class="text">
+						Мы решили <strong>визуализировать информацию</strong> понятную для большей части аудитории,<br>а именно нажатие клавиш клавиатуры и движения мыши.
+						Для более увлеченной публики будут выведены графики с частотой использования разных комбинаций клавиш.
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="part">
+			<div class="column" id="leftcolumn">
+				<h1 class="title">Особенности</h1>
+			</div>
+			<div class="column" id="rightcolumn">
+				<div class="box">
+					<h4 class="text">
+						1. Для использования <strong>не требуются</strong> дополнительного оборудования, поэтому ничто не будет мешать киберспортсменам во время турнира
+					</h4>
+					<h4 class="text">
+						2. Ориентировано на <strong>простого зрителя и пользователя</strong>
+					</h4>
+					<h4 class="text">
+						3. <srong>Интуитивно понятный  интерфейс</srong>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="part">
+			<div class="row" id="top">
+				<h1 class="title">Интерфейс</h1>
+			</div>
+			<div class="row" id="bottom">
+				<img src='images/blur/inter.jpg' data-src='images/inter.png' alt='интерфейс' class='img'>
+				<div class="box" id="link">
+					<a href='https://docs.google.com/presentation/d/1KxENfPFmwGmOgicSyNVZg7iNebfNSJkIoS0ay_gfsBo/edit?usp=sharing'>Подробная инструкция по использованию ПО</a>
+				</div>
+			</div>
+		</div>
+		<div class="part">
+			<div class="row" id="top">
+				<h1 class="title">Download</h1>
+			</div>
+			<div class="row" id="bottom">
+				<div>
+					<a href="" class="link">Ссылка на скачивание(пока не доступно)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	//addEventListener('click', function)
+	let lazyArray = Array.from(document.querySelectorAll('img'));
+
+	function lazyLoad() {
+		for (let lazy of lazyArray) {
+			if (lazy.hasAttribute('data-src') && 
+				(lazy.getBoundingClientRect().top <= window.innerHeight)) {
+				let data = lazy.getAttribute('data-src');
+				lazy.setAttribute('src', data);
+				if (lazy == lazyArray[0])
+					lazyArray.shift();
+			};
+		};
+	};
+	document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('scroll', lazyLoad);
+	});
+
+	if (lazyArray.length == 0)
+		document.removeEventListener('scroll', lazyLoad);
+</script>
+</html>
